@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghulam Murtaza Memon | Software Developer Portfolio</title>
+  <style>
+    /* ---------- Global Layout ---------- */
+    body {
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #0a1a33, #10264d);
+      color: #e8ecf2;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* ---------- Top Contact Bar ---------- */
+    .top-contact {
+      background-color: #091a35;
+      color: #e8ecf2;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 15px;
+      border-bottom: 1px solid #1e3b73;
+    }
+
+    .top-contact a {
+      color: #5ab0ff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .top-contact a:hover {
+      color: #ffffff;
+    }
+
+    /* ---------- Send Email Button ---------- */
+    .email-btn {
+      display: inline-flexbox;
+      color: #0a1a33;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin: 0 10px;
+    }
+
+
+    /* ---------- Profile Section ---------- */
+    .profile {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #0f2347, #143666);
+      border-bottom: 2px solid #1b4a91;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 3px solid #5ab0ff;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .profile h1 {
+      color: #ffffff;
+      margin-top: 20px;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    .profile p {
+      color: #a8b9d1;
+      font-size: 18px;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+
+    /* ---------- Navigation Links ---------- */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    ul a {
+      text-decoration: none;
+      color: #5ab0ff;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    ul a:hover {
+      color: #ffffff;
+      border-bottom: 2px solid #5ab0ff;
+    }
+
+    /* ---------- Introduction Section ---------- */
+    .intro {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 40px;
+      margin: 50px auto;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .intro h2 {
+      color: #5ab0ff;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      color: #d5dff1;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    /* ---------- Gallery Section ---------- */
+    .gallery {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: rgba(10, 25, 50, 0.8);
+      border-top: 2px solid #1e3b73;
+      border-bottom: 2px solid #1e3b73;
+    }
+
+    .gallery h2 {
+      color: #5ab0ff;
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+
+    .gallery a {
+      display: inline-block;
+      margin: 15px 20px;
+      font-size: 20px;
+      color: #5ab0ff;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: 2px solid #5ab0ff;
+      transition: all 0.3s ease;
+    }
+
+    .gallery a:hover {
+      background-color: #5ab0ff;
+      color: #0a1a33;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      
+      text-align: center;
+      background-color: #091a35;
+      color: #9db8e6;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: 50px;
+      border-top: 1px solid #1e3b73;
+      letter-spacing: 0.5px;
+    }
+
+    footer a {
+      color: #5ab0ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    /* ---------- Contact Section ---------- */
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+.contact-section h2 {
+  color: #5ab0ff;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #c9d4e8;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.contact-section form {
+  text-align: left;
+  width: 100%;
+}
+
+.contact-section label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 600;
+  color: #e8ecf2;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid #1e3b73;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e8ecf2;
+  font-size: 15px;
+  outline: none;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #5ab0ff;
+  box-shadow: 0 0 8px rgba(90, 176, 255, 0.4);
+}
+
+.contact-section textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-section button {
+  width: 100%;
+  background: #5ab0ff;
+  color: #0a1a33;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-section button:hover {
+  background: #ffffff;
+  color: #0a1a33;
+  transform: translateY(-3px);
+}
+
+  </style>
+</head>
+<body>
+  <!-- Top Inline Contact Bar -->
+  <div class="top-contact">
+    <a href="https://wa.me/923123038779" target="_blank">💬 WhatsApp Now</a> |
+    <a href="https://www.linkedin.com/in/gmmemon/" target="_blank">🔗 Add on LinkedIn</a> |
+    <a href="mailto:murtaza.a.memon@gmail.com" class="email-btn">📧 Send Email</a>
+  </div>
+
+  <!-- Profile Section -->
+  <div class="profile">
+    <img
+      src="https://scontent.fkhi17-2.fna.fbcdn.net/v/t39.30808-6/347374997_3542922375982812_7565593196749729047_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEThXVsUhqnCMxPqZEA4hlllVX0IxceLzaVVfQjFx4vNg0stb92bLxl6zTBtabPGIiJxm_Z4WcP_kVrwAcz3ppH&_nc_ohc=XDnXhvyMNEIQ7kNvwGomPfq&_nc_oc=AdkSNZ6yI-oaOY0KF8TnVwlMYOGNrFHBrfeMdaNccYVkIiJpoZWWlGC5P_xgODy7Gp0&_nc_zt=23&_nc_ht=scontent.fkhi17-2.fna&_nc_gid=Fyte5Bdbah9WSmsxPlUunQ&oh=00_AfiiHe904o4AgEUeRuGNy_XJ90XM1K-UX_x2N_ZeIxjqXA&oe=692753C3"
+      alt="Profile Picture of Ghulam Murtaza Memon"
+    />
+    <h1>Ghulam Murtaza Memon</h1>
+    <p>Software Developer | Web Designer | Digital Innovator</p>
+  </div>
+
+  <!-- Navigation -->
+  <ul>
+    <li><a href="/VS CODE/HTML LIST/Session 4/projects/about.html">About</a></li>
+    <li><a href="https://www.facebook.com/speakgm/photos">Gallery</a></li>
+    <li><a href="/VS CODE/HTML LIST/Session 4/projects/contact.html">Contact</a></li>
+    <li><a href="https://www.linkedin.com/in/gmmemon/" target="_blank">LinkedIn</a></li>
+  </ul>
+
+  <!-- Introduction -->
+  <div class="intro">
+    <h2>Introduction</h2>
+    <p>
+      I am <strong>Ghulam Murtaza Memon</strong>, a software developer passionate about crafting efficient, modern, and responsive web applications.
+      My work blends creativity with logic — turning complex problems into simple, elegant digital solutions.
+    </p>
+    <p>
+      With experience in <strong>Web Development, E-commerce Solutions, and AI-driven Tools</strong>,
+      I build projects that empower users and scale businesses. I believe in writing clean code,
+      continuous learning, and delivering value through innovation.
+    </p>
+  </div>
+
+  <!-- Gallery / Projects Section -->
+  <div class="gallery">
+    <h2>Featured Projects</h2>
+    <a href="https://www.facebook.com/media/set/?set=a.876091502420939&type=3" target="_blank">🔹 Free Meeting</a>
+    <a href="https://www.facebook.com/media/set/?set=a.883445008352255&type=3" target="_blank">⚙️ GAZA</a>
+    <a href="https://www.facebook.com/media/set/?set=a.891694044194018&type=3" target="_blank">💡 Iftar System</a>
+    <a href="https://www.facebook.com/media/set/?set=a.900184516678304&type=3" target="_blank">🚀 TOT</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Contact Section -->
+<div class="contact-section">
+  <h2>Contact Me</h2>
+  <p>If you have any inquiry, project idea, or collaboration request — send me a message below.</p>
+
+  <form action="mailto:murtaza.a.memon@gmail.com" method="POST" enctype="text/plain">
+    <label>Your Name</label>
+    <input type="text" name="name" placeholder="Enter your name" required />
+
+    <label>Your Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required />
+
+    <label>Your Message</label>
+    <textarea name="message" placeholder="Write your message..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+    © 2025 <strong>Ghulam Murtaza Memon</strong> | Built with 💻 Passion for Code |
+    <a href="https://www.linkedin.com/in/gmmemon/" target="_blank">Connect on LinkedIn</a>
+  </footer>
+</body>
+</html>
